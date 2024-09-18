@@ -8,11 +8,9 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class GatewayController {
 
-    lateinit var appValue: String
 
     @GetMapping("/")
     fun getValue(): ResponseEntity<Any> {
-        println(appValue)
-        return ResponseEntity.ok().body(appValue)
+        return ResponseEntity.ok().body("Gateway")
     }
 }
